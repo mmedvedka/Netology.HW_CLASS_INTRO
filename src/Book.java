@@ -16,7 +16,7 @@ public class Book {
     }
 
     public boolean matches(){
-        return title.contains(author.name) && title.contains(author.surname);
+        return title.contains(author.name) || title.contains(author.surname);
     }
 
     public int estimatePrice(){
@@ -34,3 +34,4 @@ public class Book {
         );
     }
 }
+
