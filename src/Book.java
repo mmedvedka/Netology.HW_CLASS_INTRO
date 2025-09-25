@@ -15,8 +15,8 @@ public class Book {
         return (pages > 500);
     }
 
-    public boolean matches(){
-        return title.contains(author.name) || title.contains(author.surname);
+    public boolean matches(String word){
+        return title.contains(word) || author.name.contains(word) || author.surname.contains(word);
     }
 
     public int estimatePrice(){
@@ -24,14 +24,12 @@ public class Book {
     }
 
     public String toString() {
-        return String.format("%s (г.в. %d; %d страниц; большая - %s; содержит автора - %s; цена - %d) ",
+        return String.format("%s (г.в. %d; %d страниц; большая - %s;цена - %d) ",
                 title,
                 releaseYear,
                 pages,
                 (isBig())? "Да": "Нет",
-                (matches())? "Да": "Нет",
                 estimatePrice()
         );
     }
 }
-

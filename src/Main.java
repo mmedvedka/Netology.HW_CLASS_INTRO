@@ -12,5 +12,19 @@ public class Main {
         System.out.println(bookD);
         System.out.println(bookG);
         System.out.println(bookP);
+        String word = "Джек";
+        System.out.println(String.format("Книга '%s' содержит автора %s - %s", bookD.title, word, (bookD.matches(word))? "Да": "Нет"));
+        word = "Уэлс";
+        System.out.println(String.format("Книга '%s' содержит автора %s - %s", bookD.title, word, (bookD.matches(word))? "Да": "Нет"));
+
+        word = "Герберт";
+        System.out.println(String.format("Книга '%s' содержит автора %s - %s", bookG.title, word, (bookG.matches(word))? "Да": "Нет"));
+        word = "Иванов";
+        System.out.println(String.format("Книга '%s' содержит автора %s - %s", bookG.title, word, (bookG.matches(word))? "Да": "Нет"));
+
+        word = "Петр";
+        System.out.println(String.format("Книга '%s' содержит автора %s - %s", bookP.title, word, (bookP.matches(word))? "Да": "Нет"));
+        word = "Иванов";
+        System.out.println(String.format("Книга '%s' содержит автора %s - %s", bookP.title, word, (bookP.matches(word))? "Да": "Нет"));
     }
 }
